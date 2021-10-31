@@ -21,7 +21,7 @@ const todos = [
     id: 4,
     title: "To do 4",
     description: "Description to do 4",
-    completed: false,
+    completed: true,
   },
   {
     id: 5,

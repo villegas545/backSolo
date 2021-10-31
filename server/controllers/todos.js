@@ -27,11 +27,11 @@ const updateTodos = (req, res) => {
     const arrayEditado = todos.map((item) =>
       item.id == id
         ? {
-          id: id,
-            title: body.title,
-          description: body.description,
-          completed: body.completed,
-          }
+            id: id,
+          title: body.title,
+            description: body.description,
+            completed: body.completed,
+        }
         : item
     );
     ls.set("todos", arrayEditado);
@@ -49,7 +49,7 @@ const deleteTodos = (req, res) => {
     let todos = ls.get("todos");
     const arrayEditado = todos.filter((item) => item.id != id);
     ls.set("todos", arrayEditado);
-    console.log(arrayEditado);
+    //console.log(arrayEditado);
     res.status(200).json({
       message: "Eliminado satisfactoriamente",
     });
